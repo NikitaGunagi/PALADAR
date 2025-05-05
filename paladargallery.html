@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>gallery</title>
+        <style>
+            header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 20px; 
+    background-color: rgb(16, 2, 2);
+
+   
+}
+header .navbar{
+    justify-content: space-between;/*space between about,home..*/
+     align-items: center;
+     max-width: 1200px;
+     margin: 0 auto;/*space between margin and COFEE ,HOME..*/
+     display: flex;/*space between COFFEE and home,about..,*/
+}
+#reserve:hover{
+    color:white;
+    background-color: brown;
+    
+}
+.navbar .logo{
+    color:#fff;
+    font-size: 16px;
+    font-weight:600 ;
+}
+.navbar .logo span{
+    color: #c06B3e;/*span (.) orange color*/
+}
+.navbar a:hover{
+    color:#c06B3e;
+}
+.navbar .menu-links{
+       gap: 40px;/*gap between home,about,...*/
+      display: flex;/*displaying*/
+}
+.navbar a{
+    color:#fff ;
+    text-decoration: none; /*no underlines for about,home..*/
+    transition: 0.2s ease;/*when we take a cursor on home,abou.., changes a color from white to orange*/
+}
+        </style>
+        <body>
+            <body style="background-color: rgb(157, 178, 214);">
+                <header>
+                    <nav class="navbar">
+                        <a href="#" class="logo" id="paladar">THE PALADAR<span>.</span></a>
+                        <ul class ="menu-links">
+                            <!-- <span id="close-menu-btn"><button>  CLOSE  </button></span> -->
+                       <li style="color: brown;"><a href="website01.html">HOME</a></li>
+                       <li><a href="#">GALLERY~</a></li>
+                         <li><a href="paladarcontact.html">ORDER</a></li>
+                        <li style="color: beige;"><a href="paladarabout.html">ABOUT US</a></li>
+                        <!-- <li><button id="reserve">RESERVATION</button></li> -->
+                        </ul>
+                        <!-- span id="menu-btn">MENU</span> -->
+                    </nav>
+                </header>
+                <br><br><br><br><br><br><br>
+                <h2 align="center" style="background-color: #fff;">GALLERY</h2>
+                <img src="paladar1.jpg">&nbsp;
+                <img src="paladar2.jpg"><br><hr>
+                <img src="paladar3.jpg">&nbsp;
+                <img src="palada4.jpg">
+        </body>
+    </head>
+</html>

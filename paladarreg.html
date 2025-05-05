@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Form-02</title>
+ <style>
+    body {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        background: url('paladar2.jpg') no-repeat; 
+        background-size: cover;
+        background-position: center;
+        margin: 0; /* Remove default margin */
+    }
+    form {
+        width: 300px; /* Adjust width as needed */
+        margin-top: 50px; /* Adjust margin from top */
+        padding: 20px;
+        border: 2px solid rgb(14, 13, 13);
+        background-color: rgb(189, 202, 212);
+        text-align: center;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+ </style>
+ <script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        // Simple validation for username, email, and password
+        if (username.trim() == "") { //Validation Logic: Checks if the username, email, and password fields are empty (trim() removes leading and trailing whitespace). If any field is empty, an alert is shown and the form submission is prevented (return false;).
+            alert("Please enter a username.");
+            return false;
+        }
+        if (email.trim() == "") {
+            alert("Please enter an email.");
+            return false;
+        }
+        if (password.trim() == "") {
+            alert("Please enter a password.");
+            return false;
+        }
+        // Additional validation logic can be added here
+
+        // If all validation passes, return true to submit the form
+        return true;
+    }
+ </script>
+</head>
+<body>
+  <form action="paladarlogin.html" method="POST" onsubmit="return validateForm();">
+    <h1><b>REGISTER</b></h1>
+    <label for="username">Enter user name:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="email">Enter Email Id:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Enter password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address"><br><br>
+
+    <label for="mobile">Mobile No:</label>
+    <input type="text" id="mobile" name="mobile"><br><br>
+
+   <input type="submit" value="REGISTER">
+  </form>
+</body>
+</html>

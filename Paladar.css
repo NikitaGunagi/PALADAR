@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+body{
+    height: 1vh;
+    background: url("https://tse3.mm.bing.net/th?id=OIP.s2ZLXwMZ3JjRPraZJfIxRQHaEK&pid=Api&P=0&h=180");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 20px; 
+    background-color: rgb(16, 2, 2);
+
+   
+}
+header .navbar{
+    justify-content: space-between;/*space between about,home..*/
+     align-items: center;
+     max-width: 1200px;
+     margin: 0 auto;/*space between margin and COFEE ,HOME..*/
+     display: flex;/*space between COFFEE and home,about..,*/
+}
+#paladar{
+    color:rgb(19, 1, 1);
+    background-color: #fff;
+    font-size: 16px;
+}
+#reserve:hover{
+    color:white;
+    background-color: brown;
+    
+}
+.navbar .logo{
+    color:#fff;
+    font-size: 16px;
+    font-weight:600 ;
+}
+.navbar .logo span{
+    color: #c06B3e;/*span (.) orange color*/
+}
+.navbar a:hover{
+    color:#c06B3e;
+}
+.navbar .menu-links{
+       gap: 40px;/*gap between home,about,...*/
+      display: flex;/*displaying*/
+}
+.navbar a{
+    color:#fff ;
+    text-decoration: none; /*no underlines for about,home..*/
+    transition: 0.2s ease;/*when we take a cursor on home,abou.., changes a color from white to orange*/
+}
+.her-section{
+    height: 100vh;/*center*/
+    display: flex;
+    align-items: center;/*contents of the <p>comes center*/
+    padding:20px;/*gap between left margin and content*/
+}
+.her-section .content{
+    color:#fff;/*display the contents written in <p>*/
+    /*max-width: 1200px;*/
+    margin:auto;/*h1 and <p> comes center*/
+}
+
+.her-section .content h1{
+    font-size: 3rem;/*"h1 size is increased*/
+    /*max-width: 800px;*/
+}
+.her-section .content p{
+    font-weight: 300;/*content <p>size is increased*/
+    margin-top: 15px;/*gap between h1 and <p>*/
+}
+.her-section .content h1{
+        font-size: 3rem;/*"h1 size is increased*/
+        max-width: 800px;
+    
+}
+.her-section .content button{
+    background: white;
+    font-size: 1rem;/*"order now "button size in increased*/
+    font-weight: 500;
+    margin-top: 38px;/*gap between h1 and <p> and button*/
+    padding: 12px 30px;/*height and width of the button is increased*/
+    border-radius: 6px;/*buttons border affected*/
+    cursor: pointer;/*on the button pointer*/
+   margin-top: 38px;
+    border:none;/*border of the button will be removed*/
+    outline: none;
+   background: white;
+   transition: 0.2s ease;
+}
+.her-section .content button:hover{
+    color: #fff;
+    background:#c06B3e;
+}
+
+
+#menu-btn{
+    color:white;/*menu*/
+    cursor: pointer;
+    display:none;
+}
+
+#close-menu-btn{
+    position:absolute;
+    right: 20px;
+    top:20px;
+    cursor:pointer;
+    
+}
+
+
+@media screen and (max-width: 900px){
+    header{
+        padding:10px 20px;
+    }
+    header.show-mobile-menu::before{
+      content:"";
+      position:fixed;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      backdrop-filter: blur(5px);
+
+
+
+    }
+    #close-menu-btn,#menu-btn{
+        display:block;
+    }
+    .navbar .menu-links{
+       
+        position: fixed;
+        background: #fff;
+        width: 260px;
+        height: 100vh;
+        padding:70px 40px 0;
+        flex-direction: column;
+        left: -260px;/*adjustin left */
+        top:0;/*adjusting left*/
+        transition: left 0.15s ease;
+    }
+
+    header .show-mobile-menu .navbar .menu-links{
+     left:0;
+    }
+    .navbar a{
+        color:black
+    }
+.her-section .content{
+    text-align: center;
+}
+.her-section .content :is(h1, p){
+    max-width:100%;
+
+}
+.her-section .content h1{
+    font: size 2.3rem;
+    line-height: 60px;
+}
+.her-section .content button{
+    padding:9px 18px;
+}
+ }
+
+
+
+

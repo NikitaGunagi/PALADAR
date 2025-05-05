@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>order</title>
+        <style>
+            header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 20px; 
+    background-color: rgb(16, 2, 2);
+
+   
+}
+header .navbar{
+    justify-content: space-between;/*space between about,home..*/
+     align-items: center;
+     max-width: 1200px;
+     margin: 0 auto;/*space between margin and COFEE ,HOME..*/
+     display: flex;/*space between COFFEE and home,about..,*/
+}
+#reserve:hover{
+    color:white;
+    background-color: brown;
+    
+}
+.navbar .logo{
+    color:#fff;
+    font-size: 16px;
+    font-weight:600 ;
+}
+.navbar .logo span{
+    color: #c06B3e;/*span (.) orange color*/
+}
+.navbar a:hover{
+    color:#c06B3e;
+}
+.navbar .menu-links{
+       gap: 40px;/*gap between home,about,...*/
+      display: flex;/*displaying*/
+}
+.navbar a{
+    color:#fff ;
+    text-decoration: none; /*no underlines for about,home..*/
+    transition: 0.2s ease;/*when we take a cursor on home,abou.., changes a color from white to orange*/
+}
+button .product{
+    width:20px;
+    height:10px;
+}
+
+        </style>
+        <link rel="stylesheet" href="order.css">
+    </head>
+    
+        <body style="background-color: rgb(241, 216, 183);">
+        <header>
+            <nav class="navbar">
+                <a href="#" class="logo" id="paladar">THE PALADAR<span>.</span></a>
+                <ul class ="menu-links">
+                    <!-- <span id="close-menu-btn"><button>  CLOSE  </button></span> -->
+               <li style="color: brown;"><a href="website01.html">HOME</a></li>
+               <li><a href="paladargallery.html">GALLERY~</a></li>
+                <li><a href="#">ORDER</a></li> 
+                <li style="color: beige;"><a href="paladarabout.html">ABOUT US</a></li>
+                <!-- <li><button id="reserve">RESERVATION</button></li> -->
+                </ul>
+                <!-- span id="menu-btn">MENU</span> -->
+            </nav>
+        </header>
+        <br><br><br><br><br>
+        <h2 align="center" style="background-color: #f7f2f2;">ORDER NOW</h2>
+       
+
+        <div class="products">
+            <div class="product">
+                <h2>MASALA DOSA</h2>
+                <img src="j1.jpg" alt="Product 1">
+                <p>Price: $80</p>
+                <button onclick="addToCart('Product 1', 80)">Add</button>
+            </div>
+            <div class="product">
+                <h2>THALI</h2>
+                <img src="l2.jpg" alt="Product 2">
+                <p>Price: $100</p>
+                <button onclick="addToCart('Product 2', 100)">Add</button>
+            </div>
+            <div class="product">
+                <h2>BURGER</h2>
+                <img src="l4.jpg" alt="Product 3">
+                <p>Price: $90</p>
+                <button onclick="addToCart('Product 3', 90)">Add</button>
+            </div>
+            <div class="product">
+                <h2>SANDWICH</h2>
+                <img src="l3.jpg" alt="Product 4">
+                <p>Price: $80</p>
+                <button onclick="addToCart('Product 4', 90)">Add</button>
+                
+            </div>
+        </div>
+    
+        <div class="cart">
+            <h2>ORDER FOOD</h2>
+            <div id="cart-items"></div>
+            <p>Total: $<span id="cart-total">0</span></p>
+            <button onclick="alert('ORDERED SUCCESSFULLY')" >Order</button>
+        </div>
+    
+        <script>
+            let cart = [];
+            
+            function addToCart(product, price) {
+                cart.push({ product, price });
+                displayCart();
+            }
+
+    
+            function displayCart() {
+                const cartItemsDiv = document.getElementById('cart-items');
+                cartItemsDiv.innerHTML = '';
+                let total = 0;
+                cart.forEach(item => {
+                    const cartItemDiv = document.createElement('div');
+                    cartItemDiv.className = 'cart-item';
+                    cartItemDiv.textContent = `${item.product} - $${item.price}`;
+                    cartItemsDiv.appendChild(cartItemDiv);
+                    total += item.price;
+                });
+                document.getElementById('cart-total').textContent = total;
+            }
+        </script>
+            
+    </body>
+</html>

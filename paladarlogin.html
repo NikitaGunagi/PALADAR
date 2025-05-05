@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="paladarlogin.css">
+    <style>
+        /* Additional or overridden styles can be placed here */
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h2 class="logo">PALADAR</h2>
+        <nav class="navigation">
+            <a href="website01.html">Home</a>
+            <a href="paladarabout.html">About</a>
+            <a href="paladargallery.html">GALLERY</a>
+            <a href="paladarreg.html"><button class="btn">Register</button></a>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="form">
+            <h2>LOGIN</h2>
+            <!-- <form action="" onsubmit="return validateForm()"> -->
+                <form action="paladarorder.html" onsubmit="return validateForm();">
+                <div class="input">
+                    <span class="icon"></span>
+                    <input type="text" id="username" required>
+                    <label><b>Name</b></label>
+                </div>
+                <div class="input">
+                    <span class="icon"></span>
+                    <input type="email" id="email" required>
+                    <label><b>Email</b></label>
+                </div>
+                <div class="input">
+                    <span class="icon"></span>
+                    <input type="password" id="password" required>
+                    <label><b>Password</b></label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox"> Remember Me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <br>
+                <button type="submit" class="login_btn">Login</button>
+                <div class="login_register">
+                    <p style="color: white;">Don't have an account?</p>
+                    <p><a href="paladarreg.html" class="register_link">REGISTER</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</form>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var password = document.getElementById("password").value.trim();
+
+            if (username === "") {
+                alert("Please enter a username.");
+                return false;
+            }
+            if (email === "") {
+                alert("Please enter an email.");
+                return false;
+            }
+            if (password === "") {
+                alert("Please enter a password.");
+                return false;
+            }
+
+            // Example of redirecting after successful validation (replace with actual logic)
+            alert('Login successful!');
+            window.location.href = "paladarorder.html";
+
+            return false; // Prevent form submission for demo purpose
+        }
+    </script>
+</body>
+</html>
